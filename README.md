@@ -1,4 +1,4 @@
-Example usage:
+##Example usage:
 
 Sample `docker-compose.yml`:
 
@@ -10,7 +10,7 @@ services:
     command: >
       /bin/bash -c "
         sleep 5;
-        nc -lk 0.0.0.0 8080;
+        nc -lk 0.0.0.0 5432;
       "
   another_service:
     image: ubuntu:14.04
@@ -24,7 +24,7 @@ services:
     image: ubuntu:14.04
     command: >
       /bin/bash -c "
-        nc -z the_database 8080 &&
+        nc -z the_database 5432 &&
         echo Connected to DB and started!
       "
 
@@ -33,7 +33,7 @@ services:
     depends_on:
       - the_database
       - another_service
-    command: the_database:8080 another_service:5555
+    command: the_database:5432 another_service:5555
 ```
 
 Then, to guarantee that `the_database` and `another_service` are ready before running `the_web_server`:
