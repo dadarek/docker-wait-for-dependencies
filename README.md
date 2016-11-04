@@ -22,6 +22,9 @@ services:
 
   the_web_server:
     image: ubuntu:14.04
+    depends_on:
+      - the_database
+      - another_service
     command: >
       /bin/bash -c "
         nc -z the_database 5432 &&
