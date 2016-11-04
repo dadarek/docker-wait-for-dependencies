@@ -42,7 +42,7 @@ services:
 Then, to guarantee that `the_database` and `another_service` are ready before running `the_web_server`:
 
 ```bash
-$ docker-compose run start_dependencies
+$ docker-compose run --rm start_dependencies
 # Some output from docker compose
 $ docker-compose up the_web_server
 ```
