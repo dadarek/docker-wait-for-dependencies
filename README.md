@@ -1,4 +1,4 @@
-##Example usage:
+## Example usage:
 
 Sample `docker-compose.yml`:
 
