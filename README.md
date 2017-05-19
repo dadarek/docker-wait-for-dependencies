@@ -55,3 +55,13 @@ By default, there will be a 2 second sleep time between each check. You can modi
     environment:
       - SLEEP_LENGTH: 0.5
 ```
+
+To add a limit to the waiting time in seconds, define `WAIT_FOR` environment variable:
+
+```yaml
+  start_dependencies:
+    image: dadarek/wait-for-dependencies
+    environment:
+      - SLEEP_LENGTH: 0.5
+      - WAIT_FOR: 10
+```
