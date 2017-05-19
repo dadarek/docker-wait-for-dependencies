@@ -10,7 +10,7 @@ keep_waiting(){
       return 0
     else
       echo "Exceed waiting limit $SLEPT"
-      return 1
+      exit 1
     fi
   else
     return 0
