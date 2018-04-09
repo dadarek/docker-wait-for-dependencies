@@ -9,8 +9,8 @@ wait_for() {
   while ! nc -z $1 $2;
     do
     if [ $(($(date +%s) - $START)) -gt $TIMEOUT_LENGTH ]; then
-        echo timeout
-        break
+        echo timeout!
+        exit 1
     fi
     echo sleeping;
     sleep $SLEEP_LENGTH;
