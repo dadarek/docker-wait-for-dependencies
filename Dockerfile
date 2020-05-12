@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.10
 
 ADD entrypoint.sh /usr/local/bin/entrypoint.sh
 
