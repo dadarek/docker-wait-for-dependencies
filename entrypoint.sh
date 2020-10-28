@@ -13,7 +13,7 @@ wait_for() {
         exit 1
     fi
     echo "sleeping"
-    sleep $SLEEP_LENGTH
+    sleep $SLEEP_LENGTH 
   done
   echo "Service $1:$2 available!"
 }
