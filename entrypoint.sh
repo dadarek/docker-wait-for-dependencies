@@ -15,6 +15,7 @@ wait_for() {
     echo "sleeping"
     sleep $SLEEP_LENGTH
   done
+  echo "Service $1:$2 available!"
 }
 
 for var in "$@"
