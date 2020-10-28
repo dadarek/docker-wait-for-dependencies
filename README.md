@@ -1,3 +1,12 @@
+## What's different compared to the original fork?
+
+Just a minor thing - the script will notify when the service is ready.
+Without it, when the service is already available it looks as if it was frozen.
+
+**All kudos to orignal author. I created a pull request, but I needed that now, so I created my own image in docker hub (bartoszjarmuz/wait-for-dependencies)**
+
+https://hub.docker.com/repository/docker/bartoszjarmuz/wait-for-dependencies
+
 ## Example usage:
 
 Sample `docker-compose.yml`:
